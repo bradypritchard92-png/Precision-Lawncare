@@ -54,7 +54,7 @@ Pricing is quote-only (no price list page). Search the project for `Your city` t
 
 - **Voice:** First person throughout (I / me / my) — solo operator.
 - **Spelling:** Canadian English (e.g. neighbours, personalised, colour-adjacent copy avoided where unused).
-- **Services included:** Lawn mowing, Edging and trimming, Spring and fall cleanup, Leaf removal, Hedge trimming, Snow/winter services, Gutter cleaning, Dethatching.
+- **Services included:** Lawn mowing, Edging and trimming, Spring and fall cleanup, Leaf removal, Hedge trimming, Snow/winter services, Dethatching.
 - **Not offered on this site:** Aeration, fertilizer / fertiliser programs.
 
 ## Contact form
