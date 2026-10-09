@@ -69,7 +69,9 @@
     });
   });
 
+  var submitting = false;
   form.addEventListener("submit", function (e) {
+    if (submitting) return;
     e.preventDefault();
     var valid = true;
 
@@ -90,7 +92,7 @@
       valid = false;
     }
 
-    var checked = form.querySelectorAll('input[name="services"]:checked');
+    var checked = form.querySelectorAll('input.svc:checked');
     var servicesGroup = form.querySelector(".services-checkboxes");
     if (servicesGroup) {
       var errEl = servicesGroup.querySelector(".error-msg");
@@ -121,23 +123,30 @@
       return;
     }
 
-    /* Demo success: no backend yet */
-    var card = form.closest(".form-card");
-    if (card) {
-      card.classList.add("is-submitted");
-      var success = card.querySelector(".form-success");
-      if (success) {
-        success.classList.add("is-visible");
-        success.setAttribute("tabindex", "-1");
-        success.focus();
-      }
+    var combined = form.querySelector("#services-combined");
+    if (combined) {
+      combined.value = Array.prototype.map.call(checked, function (c) { return c.value; }).join(", ");
     }
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+    submitting = true;
+    form.submit();
   });
+
+  if (/[?&]sent=1/.test(window.location.search)) {
+    var sentCard = form.closest(".form-card");
+    if (sentCard) {
+      sentCard.classList.add("is-submitted");
+      var ok = sentCard.querySelector(".form-success");
+      if (ok) { ok.classList.add("is-visible"); ok.focus(); }
+    }
+  }
 
   var resetBtn = document.getElementById("form-reset");
   if (resetBtn) {
     resetBtn.addEventListener("click", function () {
       form.reset();
+      if (window.history && history.replaceState) history.replaceState(null, "", window.location.pathname + "#quote-form");
       var card = form.closest(".form-card");
       if (card) {
         card.classList.remove("is-submitted");

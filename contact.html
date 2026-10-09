@@ -97,7 +97,13 @@
           <div class="form-card">
             <div class="form-fields">
               <h2>Request a quote</h2>
-              <form id="quote-form" action="#" method="post" novalidate>
+              <form id="quote-form" action="https://formsubmit.co/bradypritchard92@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
+                <input type="hidden" name="_subject" value="New quote request from the Precision Lawn Care website">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://precisionlawncare.github.io/Precision-Lawncare/contact.html?sent=1#quote-form">
+                <input type="hidden" name="Services requested" id="services-combined" value="">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                 <div class="form-group">
                   <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
                   <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your full name">
@@ -121,13 +127,13 @@
                 <div class="form-group services-checkboxes">
                   <span class="label-like" id="services-label" style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem">Services needed <span class="req" aria-hidden="true">*</span></span>
                   <div class="checkbox-group" role="group" aria-labelledby="services-label">
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Lawn mowing"> Lawn mowing</label>
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Edging and trimming"> Edging and trimming</label>
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Spring and fall cleanup"> Spring and fall cleanup</label>
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Leaf removal"> Leaf removal</label>
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Hedge trimming"> Hedge trimming</label>
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Snow/winter services"> Snow / winter services</label>
-                    <label class="checkbox-item"><input type="checkbox" name="services" value="Dethatching"> Dethatching</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Lawn mowing"> Lawn mowing</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Edging and trimming"> Edging and trimming</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Spring and fall cleanup"> Spring and fall cleanup</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Leaf removal"> Leaf removal</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Hedge trimming"> Hedge trimming</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Snow/winter services"> Snow / winter services</label>
+                    <label class="checkbox-item"><input type="checkbox" class="svc" value="Dethatching"> Dethatching</label>
                   </div>
                   <p class="error-msg" role="alert"></p>
                 </div>
@@ -193,6 +199,6 @@
     <a href="contact.html" class="btn btn-primary">Get a quote</a>
   </div>
 
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>
