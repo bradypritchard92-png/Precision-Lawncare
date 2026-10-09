@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Request a free lawn care quote from Precision Lawn Care. Call, email, or fill out the form — I reply promptly.">
   <title>Contact | Precision Lawn Care</title>
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -132,13 +132,16 @@
                   <p class="error-msg" role="alert"></p>
                 </div>
                 <div class="form-group">
+                  <label for="photo">Photo of your lawn or project <span class="req" aria-hidden="true">*</span></label>
+                  <input type="file" id="photo" name="attachment" accept="image/*" required aria-describedby="photo-help">
+                  <p id="photo-help" style="font-size:0.8rem;color:var(--text-muted);margin-top:0.35rem">Required. One photo, up to 10 MB. On a phone you can take one right now.</p>
+                  <p class="error-msg" role="alert"></p>
+                </div>
+                <div class="form-group">
                   <label for="message">Message</label>
                   <textarea id="message" name="message" placeholder="Yard size, access notes, preferred schedule — anything that helps me quote accurately."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send my quote request</button>
-                <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.85rem;text-align:center">
-                  This demo form validates on the page and shows a success message. Wire it to Formspree, Netlify Forms, or your email when you go live.
-                </p>
               </form>
             </div>
             <div class="form-success" tabindex="-1" role="status" aria-live="polite">
@@ -190,6 +193,6 @@
     <a href="contact.html" class="btn btn-primary">Get a quote</a>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

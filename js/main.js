@@ -33,6 +33,7 @@
     email: form.querySelector("#email"),
     area: form.querySelector("#area"),
     message: form.querySelector("#message"),
+    photo: form.querySelector("#photo"),
   };
 
   function setError(el, msg) {
@@ -61,6 +62,9 @@
     var el = fields[key];
     if (!el) return;
     el.addEventListener("input", function () {
+      clearError(el);
+    });
+    el.addEventListener("change", function () {
       clearError(el);
     });
   });
@@ -99,13 +103,25 @@
       }
     }
 
+    var file = fields.photo && fields.photo.files && fields.photo.files[0];
+    if (!file) {
+      setError(fields.photo, "Please add a photo of your lawn or project.");
+      valid = false;
+    } else if (file.type && file.type.indexOf("image/") !== 0) {
+      setError(fields.photo, "Please choose an image file (JPG, PNG, HEIC).");
+      valid = false;
+    } else if (file.size > 10 * 1024 * 1024) {
+      setError(fields.photo, "That photo is over 10 MB. Please choose a smaller one.");
+      valid = false;
+    }
+
     if (!valid) {
       var firstErr = form.querySelector(".has-error input, .has-error textarea");
       if (firstErr) firstErr.focus();
       return;
     }
 
-    /* Demo success — no backend; ready to wire to Formspree/Netlify Forms later */
+    /* Demo success: no backend yet */
     var card = form.closest(".form-card");
     if (card) {
       card.classList.add("is-submitted");
