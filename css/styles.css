@@ -418,44 +418,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-detail:nth-child(even) .service-detail-body { order: -1; }
 }
 
-/* —— Reviews —— */
-.reviews-strip {
-  display: grid;
-  gap: 1.25rem;
-}
-@media (min-width: 700px) {
-  .reviews-strip { grid-template-columns: repeat(3, 1fr); }
-}
-.review-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-}
-.review-stars {
-  color: #d4a017;
-  letter-spacing: 2px;
-  margin-bottom: 0.75rem;
-  font-size: 0.95rem;
-}
-.review-card blockquote {
-  font-size: 0.95rem;
-  color: var(--text);
-  margin-bottom: 1rem;
-  font-style: italic;
-  line-height: 1.55;
-}
-.review-author {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--green-800);
-}
-.review-meta {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
 /* —— Photo strip —— */
 .photo-strip {
   display: grid;
