@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a free lawn care quote from Precision Lawn Care. Call, email, or fill out the form — I reply promptly.">
+  <title>Contact | Precision Lawn Care</title>
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Precision Lawn Care home">
+        <span class="logo-mark" aria-hidden="true">🌿</span>
+        Precision Lawn Care
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://cal.com/brady-pritchard-fwduwt/lawncare-booking" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm book-now">Book now</a>
+                <a href="tel:+12508630059" class="btn btn-secondary btn-sm">Call me</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get a free quote</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Get a free quote</h1>
+        <p>Tell me about your property and I’ll get back to you with a clear estimate — usually within one business day.</p>
+      </div>
+    </section>
+
+    <section class="section" id="book-now">
+      <div class="container text-center">
+        <h2>Book an appointment</h2>
+        <p>Pick a time that works for you and I'll see you there.</p>
+        <a href="https://cal.com/brady-pritchard-fwduwt/lawncare-booking" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg book-now">Book now</a>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <aside class="contact-info">
+            <h1>How to reach me</h1>
+            <p>Prefer to talk? Call or email anytime. Or use the form — whichever is easiest for you.</p>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+12508630059">250-863-0059</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:Bradypritchard92@gmail.com">Bradypritchard92@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">📍</div>
+              <div>
+                <strong>Service area</strong>
+                <span>West Kelowna</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon" aria-hidden="true">⭐</div>
+              <div>
+                <strong>Reviews</strong>
+                <a href="https://share.google/43t8ysO9PD0ju9nMb" target="_blank" rel="noopener noreferrer">See my Google reviews</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="form-card">
+            <div class="form-fields">
+              <h2>Request a quote</h2>
+              <form id="quote-form" action="#" method="post" novalidate>
+                <div class="form-group">
+                  <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your full name">
+                  <p class="error-msg" role="alert"></p>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="(555) 555-5555">
+                  <p class="error-msg" role="alert"></p>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+                  <p class="error-msg" role="alert"></p>
+                </div>
+                <div class="form-group">
+                  <label for="area">Area / neighbourhood <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="area" name="area" required placeholder="e.g. downtown, west end, nearby town">
+                  <p class="error-msg" role="alert"></p>
+                </div>
+                <div class="form-group services-checkboxes">
+                  <span class="label-like" id="services-label" style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:0.5rem">Services needed <span class="req" aria-hidden="true">*</span></span>
+                  <div class="checkbox-group" role="group" aria-labelledby="services-label">
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Lawn mowing"> Lawn mowing</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Edging and trimming"> Edging and trimming</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Spring and fall cleanup"> Spring and fall cleanup</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Leaf removal"> Leaf removal</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Hedge trimming"> Hedge trimming</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Snow/winter services"> Snow / winter services</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Gutter cleaning"> Gutter cleaning</label>
+                    <label class="checkbox-item"><input type="checkbox" name="services" value="Dethatching"> Dethatching</label>
+                  </div>
+                  <p class="error-msg" role="alert"></p>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Yard size, access notes, preferred schedule — anything that helps me quote accurately."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send my quote request</button>
+                <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.85rem;text-align:center">
+                  This demo form validates on the page and shows a success message. Wire it to Formspree, Netlify Forms, or your email when you go live.
+                </p>
+              </form>
+            </div>
+            <div class="form-success" tabindex="-1" role="status" aria-live="polite">
+              <div class="form-success-icon" aria-hidden="true">✓</div>
+              <h3>Thanks — I’ve got your request</h3>
+              <p>I’ll review the details and get back to you soon. If it’s urgent, call me at 250-863-0059.</p>
+              <button type="button" id="form-reset" class="btn btn-secondary">Send another request</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-mark" aria-hidden="true">🌿</span>
+            Precision Lawn Care
+          </a>
+          <p>One-person lawn care for neighbours who want reliable, careful work — without the big-company hassle.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Reach me</h4>
+          <a href="tel:+12508630059">250-863-0059</a>
+          <a href="mailto:Bradypritchard92@gmail.com">Bradypritchard92@gmail.com</a>
+          <span>West Kelowna</span>
+          <a href="https://share.google/43t8ysO9PD0ju9nMb" target="_blank" rel="noopener noreferrer">Google reviews</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Precision Lawn Care. All rights reserved.</span>
+        <span>Serving West Kelowna</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" role="region" aria-label="Quick actions">
+    <a href="tel:+12508630059" class="btn btn-secondary">Call me</a>
+    <a href="contact.html" class="btn btn-primary">Get a quote</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
